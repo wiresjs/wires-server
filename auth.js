@@ -11,7 +11,6 @@ domain.service("wiresServerAuth", function() {
          logger.info("Connection accepted")
          return accept(null, true);
       }
-      console.log(handshakeData.socket)
       logger.info("Connection rejected (invalid token)")
       accept(JSON.stringify({
          status: 500,
